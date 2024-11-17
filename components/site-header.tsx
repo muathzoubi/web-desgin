@@ -1,52 +1,41 @@
+"use client"
+
 import Link from "next/link"
 
-import { siteConfig } from "@/config/site"
-import { buttonVariants } from "@/components/ui/button"
-import { Icons } from "@/components/icons"
-import { MainNav } from "@/components/main-nav"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { useState } from "react"
+import { Palette } from "lucide-react"
+import { Menu } from "lucide-react"
 
 export function SiteHeader() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
   return (
-    <header className="bg-background sticky top-0 z-40 w-full border-b">
-      <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
-        <MainNav items={siteConfig.mainNav} />
-        <div className="flex flex-1 items-center justify-end space-x-4">
-          <nav className="flex items-center space-x-1">
-            <Link
-              href={siteConfig.links.github}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div
-                className={buttonVariants({
-                  size: "icon",
-                  variant: "ghost",
-                })}
-              >
-                <Icons.gitHub className="h-5 w-5" />
-                <span className="sr-only">GitHub</span>
-              </div>
-            </Link>
-            <Link
-              href={siteConfig.links.twitter}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div
-                className={buttonVariants({
-                  size: "icon",
-                  variant: "ghost",
-                })}
-              >
-                <Icons.twitter className="h-5 w-5 fill-current" />
-                <span className="sr-only">Twitter</span>
-              </div>
-            </Link>
-            <ThemeToggle />
-          </nav>
-        </div>
-      </div>
-    </header>
+    <header className="px-4 lg:px-6 h-14 flex items-center border-b border-fuchsia-700">
+        <Link href="#" className="flex items-center justify-center">
+       <img className="logo" src="/next.svg" alt="logo"/>
+        </Link>
+        <button onClick={toggleMenu} className="ml-auto lg:hidden text-fuchsia-400">
+          <Menu className="h-6 w-6" />
+          <span className="sr-only">Toggle menu</span>
+        </button>
+        <nav className={`${isMenuOpen ? 'flex' : 'hidden'} lg:flex absolute top-14 left-0 right-0 bg-black border-b border-fuchsia-700 lg:border-none lg:static flex-col lg:flex-row gap-4 p-4 lg:p-0 lg:ml-auto`}>
+          <Link className="text-sm font-medium hover:text-fuchsia-400 transition-colors" href="#features">
+            Features
+          </Link>
+          <Link className="text-sm font-medium hover:text-fuchsia-400 transition-colors" href="#background">
+            About Us
+          </Link>
+          <Link className="text-sm font-medium hover:text-fuchsia-400 transition-colors" href="#portfolio">
+            Portfolio
+          </Link>
+          <Link className="text-sm font-medium hover:text-fuchsia-400 transition-colors" href="#contact">
+            Contact
+          </Link>
+        </nav>
+      </header>
   )
 }

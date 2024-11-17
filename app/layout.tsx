@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils"
 import { SiteHeader } from "@/components/site-header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
+import Link from "next/link"
 
 export const metadata: Metadata = {
   title: {
@@ -44,6 +45,19 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <div className="relative flex min-h-screen flex-col">
               <SiteHeader />
               <div className="flex-1">{children}</div>
+              <footer className="w-full py-6 px-4 md:px-6 border-t border-fuchsia-700">
+        <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center">
+          <p className="text-xs text-gray-400">© 2024 PURE Web Design. All rights reserved.</p>
+          <nav className="flex gap-4 sm:gap-6 mt-4 sm:mt-0">
+            <Link className="text-xs hover:text-fuchsia-400 transition-colors" href="#">
+              Terms of Service
+            </Link>
+            <Link className="text-xs hover:text-fuchsia-400 transition-colors" href="#">
+              Privacy
+            </Link>
+          </nav>
+        </div>
+      </footer>
             </div>
             <TailwindIndicator />
           </ThemeProvider>

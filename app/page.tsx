@@ -4,28 +4,24 @@ import { Button } from "@/components/ui/button"
 import { Code, Palette, Zap, Layers, CheckCircle, Award, Users, Briefcase, Menu } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
-const list=[
-  {item:1,url:''}, 
-  {item:2,url:''}, 
-  {item:3,url:''}, 
-  {item:4,url:''}, 
-  {item:5,url:''}, 
-  {item:6,url:''}, 
+const list = [
+  { item: 1, url: 'https://simple-img-viewer.vercel.app/' },
+  { item: 2, url: 'https://rhz-ten.vercel.app/' },
+  { item: 3, url: 'https://paddle-billing-subscription-starter-delta-nine.vercel.app/' },
+  { item: 4, url: 'https://app-minier.vercel.app/' },
+  { item: 5, url: 'https://merva-ai.vercel.app/' },
+  { item: 6, url: 'https://pos-sys-ebon.vercel.app/' },
 ]
-export default function fuchsiaWebDesignLanding() {
+export default function WebDesignLanding() {
   const [email, setEmail] = useState('')
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     console.log('Form submitted with email:', email)
     setEmail('')
   }
-
-
-
   return (
     <div className="flex flex-col min-h-screen text-white">
-<div className='app'></div>
+      <div className='app'></div>
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 px-4 md:px-6 ">
           <div className="container mx-auto ">
@@ -129,7 +125,7 @@ export default function fuchsiaWebDesignLanding() {
                     height={400}
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
-                  <Link href={item.url}>  <Button variant="outline" className="text-fuchsia-400 border-fuchsia-400 hover:bg-fuchsia-900">View Project</Button></Link>
+                    <Link href={item.url}>  <Button variant="outline" className="text-fuchsia-400 border-fuchsia-400 hover:bg-fuchsia-900">View Project</Button></Link>
                   </div>
                 </div>
               ))}
@@ -137,19 +133,19 @@ export default function fuchsiaWebDesignLanding() {
           </div>
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32 px-4 md:px-6">
-        <div className="container mx-auto">
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-fuchsia-400">Our Technologies</h2>
+          <div className="container mx-auto">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-fuchsia-400">Our Technologies</h2>
 
-        <div className="slider">
-	<div className="slide-track">
-{[1,2,3,4,5,6,7,8].map((i)=>
-		<div className="slide" key={i}>
-    <img className='drop' src={`/tec/${i}.svg`} height={90} width={100} alt="" />
-  </div>
-)}
-	</div>
-	</div>
-</div>
+            <div className="slider">
+              <div className="slide-track">
+                {[1, 2, 3, 4, 5, 6, 7, 8].map((i) =>
+                  <div className="slide" key={i}>
+                    <img src={`/tec/${i}.svg`} height={90} width={100} alt="" />
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
         </section>
         <section id="contact" className="w-full py-12 md:py-24 lg:py-32 px-4 md:px-6">
           <div className="container mx-auto">
@@ -181,6 +177,13 @@ export default function fuchsiaWebDesignLanding() {
             </div>
           </div>
         </section>
+        <Link href={'https://css.com/brand'}>
+        <img
+                    src={`https://www.gatewayspesach.org/wp-content/uploads/2019/08/600px-Instagram_logo_2016.svg_.png`}
+                    className="chat"
+                    height={80}
+                  />
+                  </Link>
       </main>
 
     </div>

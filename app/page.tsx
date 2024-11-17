@@ -136,6 +136,21 @@ export default function fuchsiaWebDesignLanding() {
             </div>
           </div>
         </section>
+        <section className="w-full py-12 md:py-24 lg:py-32 px-4 md:px-6">
+        <div className="container mx-auto">
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-fuchsia-400">Our Technologies</h2>
+
+        <div className="slider">
+	<div className="slide-track">
+{[1,2,3,4,5,6,7,8].map((i)=>
+		<div className="slide" key={i}>
+    <img className='drop' src={`/tec/${i}.svg`} height={90} width={100} alt="" />
+  </div>
+)}
+	</div>
+	</div>
+</div>
+        </section>
         <section id="contact" className="w-full py-12 md:py-24 lg:py-32 px-4 md:px-6">
           <div className="container mx-auto">
             <div className="flex flex-col items-center space-y-4 text-center">

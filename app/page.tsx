@@ -1,8 +1,11 @@
 "use client"
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { Code, Palette, Zap, Layers, CheckCircle, Award, Users, Briefcase, Menu } from 'lucide-react'
 import Link from 'next/link'
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
 const list = [
   { item: 1, url: 'https://simple-img-viewer.vercel.app/' },
   { item: 2, url: 'https://rhz-ten.vercel.app/' },
@@ -18,6 +21,9 @@ export default function WebDesignLanding() {
     console.log('Form submitted with email:', email)
     setEmail('')
   }
+  useEffect(()=>{
+    AOS.init()
+  },[])
   return (
     <div className="flex flex-col text-white">
       <video className='app' loop={true} muted={true} controls={false} autoPlay>
@@ -43,7 +49,7 @@ export default function WebDesignLanding() {
           </div>
         </section>
         <section id="features" className="w-full py-12 md:py-24 lg:py-32 bg-red-700 px-4 md:px-6">
-          <div className="container mx-auto">
+          <div className="container mx-auto" data-aos="fade-right">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-balck-400">Our Services</h2>
             <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
               <div className="flex flex-col items-center text-center">
@@ -64,11 +70,11 @@ export default function WebDesignLanding() {
             </div>
           </div>
         </section>
-        <section id="background" className="w-full py-12 md:py-24 lg:py-32 px-4 md:px-6">
-          <div className="container mx-auto">
-            <div className="grid gap-10 lg:grid-cols-2 items-center">
-              <div className="space-y-4">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-red-400">Our Professional Background</h2>
+        <section id="background" className="w-full py-12 md:py-24 lg:py-32 px-4 md:px-6" >
+          <div className="container mx-auto" data-aos="fade-left">
+            <div className="grid gap-10 lg:grid-cols-2 items-center" >
+              <div className="space-y-4" data-aos="fade-up-right">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-red-400" >Our Professional Background</h2>
                 <p className="text-gray-300 md:text-lg">
                   With over a decade of experience in web design and development, our team of experts has successfully delivered hundreds of projects across various industries. We combine cutting-edge technology with creative design to bring your vision to life.
                 </p>
@@ -87,7 +93,7 @@ export default function WebDesignLanding() {
                   </li>
                 </ul>
               </div>
-              <div className="grid grid-cols-2 gap-4 md:gap-6">
+              <div className="grid grid-cols-2 gap-4 md:gap-6" data-aos="fade-in">
                 <div className="flex flex-col items-center space-y-2 border border-red-700 rounded-lg p-4 bg-red-900 bg-opacity-50">
                   <Award className="h-10 w-10 text-red-400" />
                   <h3 className="text-lg font-bold text-red-300">Award-Winning</h3>
@@ -112,7 +118,7 @@ export default function WebDesignLanding() {
             </div>
           </div>
         </section>
-        <section id="portfolio" className="w-full py-12 md:py-24 lg:py-32 bg-red-900 px-4 md:px-6">
+        <section id="portfolio" className="w-full py-12 md:py-24 lg:py-32 bg-red-900 px-4 md:px-6" data-aos="fade-up-right">
           <div className="container mx-auto">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-red-400">Our Portfolio</h2>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -133,7 +139,7 @@ export default function WebDesignLanding() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 px-4 md:px-6">
+        <section className="w-full py-12 md:py-24 lg:py-32 px-4 md:px-6" data-aos="fade-up-left">
           <div className="container mx-auto">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-red-400">Our Technologies</h2>
 

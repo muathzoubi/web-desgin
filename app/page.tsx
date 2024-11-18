@@ -177,15 +177,14 @@ export default function WebDesignLanding() {
             </div>
           </div>
         </section>
-        <Link href={'https://css.com/brand'}>
-        <img
-                    src={`https://www.gatewayspesach.org/wp-content/uploads/2019/08/600px-Instagram_logo_2016.svg_.png`}
-                    className="chat"
-                    height={80}
-                  />
-                  </Link>
+        <Link href={'https://www.instagram.com/rhz_solutions/'}>
+          <img
+            src={`https://www.gatewayspesach.org/wp-content/uploads/2019/08/600px-Instagram_logo_2016.svg_.png`}
+            className="chat"
+            height={80}
+          />
+        </Link>
       </main>
-
     </div>
   )
 }

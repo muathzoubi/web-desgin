@@ -14,25 +14,25 @@ export function SiteHeader() {
     setIsMenuOpen(!isMenuOpen)
   }
   return (
-    <header className="px-4 lg:px-6 h-14 flex items-center border-b border-fuchsia-700">
+    <header className="px-4 lg:px-6 h-14 flex items-center border-b border-red-700 backdrop-blur-md	">
         <Link href="#" className="flex items-center justify-center">
        <img className="logo" src="/next.svg" alt="logo"/>
         </Link>
-        <button onClick={toggleMenu} className="ml-auto lg:hidden text-fuchsia-400">
+        <button onClick={toggleMenu} className="ml-auto lg:hidden text-red-400">
           <Menu className="h-6 w-6" />
           <span className="sr-only">Toggle menu</span>
         </button>
-        <nav className={`${isMenuOpen ? 'flex' : 'hidden'} lg:flex absolute top-14 left-0 right-0 bg-black border-b border-fuchsia-700 lg:border-none lg:static flex-col lg:flex-row gap-4 p-4 lg:p-0 lg:ml-auto`}>
-          <Link className="text-sm font-medium hover:text-fuchsia-400 transition-colors" href="#features">
+        <nav className={`${isMenuOpen ? 'flex' : 'hidden'} lg:flex absolute top-14 left-0 right-0 border-b border-red-700 lg:border-none lg:static flex-col lg:flex-row gap-4 p-4 lg:p-0 lg:ml-auto`}>
+          <Link className="text-sm font-medium hover:text-red-400 transition-colors" href="#features">
             Features
           </Link>
-          <Link className="text-sm font-medium hover:text-fuchsia-400 transition-colors" href="#background">
+          <Link className="text-sm font-medium hover:text-red-400 transition-colors" href="#background">
             About Us
           </Link>
-          <Link className="text-sm font-medium hover:text-fuchsia-400 transition-colors" href="#portfolio">
+          <Link className="text-sm font-medium hover:text-red-400 transition-colors" href="#portfolio">
             Portfolio
           </Link>
-          <Link className="text-sm font-medium hover:text-fuchsia-400 transition-colors" href="#contact">
+          <Link className="text-sm font-medium hover:text-red-400 transition-colors" href="#contact">
             Contact
           </Link>
         </nav>

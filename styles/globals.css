@@ -116,7 +116,16 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-250px * 7));
+    transform: translateX(calc(-150px * 7));
+  }
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+
   }
 }
 .slider {
@@ -125,8 +134,13 @@
   height: 100px;
   margin: auto;
   overflow: hidden;
+  animation-name: opacity;
+  animation-duration: 5s;
+  animation-delay:12s;
+animation-fill-mode: forwards;
+
   position: relative;
-  width: 1260px;
+  width: 80vw;
   border-radius: 5px;
 }
 .slider::before, .slider::after {
@@ -146,7 +160,7 @@
   top: 0;
 }
 .slider .slide-track {
-  animation: scroll 40s linear infinite;
+  animation: scroll 12s linear infinite;
   display: flex;
   width: calc(250px * 14);
 }

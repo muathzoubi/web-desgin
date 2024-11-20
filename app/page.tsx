@@ -8,8 +8,8 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..
 const list = [
   { item: 1, url: 'https://simple-img-viewer.vercel.app/' },
-  { item: 2, url: 'https://rhz-ten.vercel.app/' },
-  { item: 3, url: 'https://paddle-billing-subscription-starter-delta-nine.vercel.app/' },
+  { item: 2, url: 'https://paddle-billing-subscription-starter-delta-nine.vercel.app/' },
+  { item: 3, url: 'https://rhz-ten.vercel.app/' },
   { item: 4, url: 'https://app-minier.vercel.app/' },
   { item: 5, url: 'https://merva-ai.vercel.app/' },
   { item: 6, url: 'https://pos-sys-ebon.vercel.app/' },

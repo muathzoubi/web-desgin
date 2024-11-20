@@ -8,6 +8,9 @@ import { SiteHeader } from "@/components/site-header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
 import Link from "next/link"
+import { FacebookIcon } from "lucide-react"
+import { TwitterIcon } from "lucide-react"
+import { InstagramIcon } from "lucide-react"
 
 export const metadata: Metadata = {
   title: {
@@ -41,21 +44,50 @@ export default function RootLayout({ children }: RootLayoutProps) {
             fontSans.variable
           )}
         >
-          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
             <div className="relative flex min-h-screen flex-col">
-              <SiteHeader />
               <div className="flex-1 ">{children}</div>
-              <footer className="w-full py-6 px-4 md:px-6 border-t border-red-700">
-                <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center">
-                  <p className="text-xs text-gray-400">© 2024 RHZ Solutions. All rights reserved.</p>
-                  <nav className="flex gap-4 sm:gap-6 mt-4 sm:mt-0">
-                    <Link className="text-xs hover:text-red-400 transition-colors" href="#">
-                      Terms of Service
-                    </Link>
-                    <Link className="text-xs hover:text-red-400 transition-colors" href="#">
-                      Privacy
-                    </Link>
-                  </nav>
+              {/* Footer */}
+              <footer className="bg-gray-800 text-white py-8">
+                <div className="max-w-6xl mx-auto px-4">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div>
+                      <h3 className="text-lg font-semibold mb-4">عن الشركة</h3>
+                      <ul className="space-y-2">
+                        <li><Link href="#" className="hover:underline">من نحن</Link></li>
+                        <li><Link href="#" className="hover:underline">وظائف</Link></li>
+                        <li><Link href="#" className="hover:underline">اتصل بنا</Link></li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold mb-4">المساعدة</h3>
+                      <ul className="space-y-2">
+                        <li><Link href="#" className="hover:underline">الأسئلة الشائعة</Link></li>
+                        <li><Link href="#" className="hover:underline">سياسة الخصوصية</Link></li>
+                        <li><Link href="#" className="hover:underline">شروط الاستخدام</Link></li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold mb-4">تابعنا</h3>
+                      <div className="flex space-x-4">
+                        <Link href="#" className="hover:text-primary">
+                          <FacebookIcon className="h-6 w-6" />
+                          <span className="sr-only">Facebook</span>
+                        </Link>
+                        <Link href="#" className="hover:text-primary">
+                          <TwitterIcon className="h-6 w-6" />
+                          <span className="sr-only">Twitter</span>
+                        </Link>
+                        <Link href="#" className="hover:text-primary">
+                          <InstagramIcon className="h-6 w-6" />
+                          <span className="sr-only">Instagram</span>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mt-8 text-center text-sm">
+                    <p>&copy; {new Date().getFullYear()} شركة الجزيرة للسفر. جميع الحقوق محفوظة.</p>
+                  </div>
                 </div>
               </footer>
             </div>

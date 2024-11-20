@@ -1,8 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Cairo:wght@200..1000&family=El+Messiri:wght@400..700&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Rubik:ital,wght@0,300..900;1,300..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  *{
+    font-family: "Tajawal", serif !important;
+    direction: rtl;
+
+  }
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 47.4% 11.2%;

@@ -140,7 +140,7 @@
 animation-fill-mode: forwards;
 
   position: relative;
-  width: 80vw;
+  width: 70vw;
   border-radius: 5px;
 }
 .slider::before, .slider::after {

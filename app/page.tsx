@@ -326,7 +326,6 @@ export default function WebDesignLanding() {
           <img src={`/mes.png`} className="chat" height={80} />
         </Link>
       </main>
-      <DialogDemo />
     </div>
   )
 }

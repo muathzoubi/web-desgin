@@ -308,12 +308,12 @@ export default function WebDesignLanding() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    className="bg-red-900 border-red-700  placeholder-white bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-red-700 dark:border-red-600 dark:placeholder-red-400 dark:text-white  "
+                    className="bg-red-900 border-red-700  placeholder-white  border  text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-red-700 dark:border-red-600 dark:placeholder-red-400 dark:text-white  "
                   />
                   <textarea
                     placeholder="Tell us about your project"
                     required
-                    className="bg-red-900 border-red-700 placeholder-white bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-red-700 dark:border-red-600 dark:placeholder-red-400 dark:text-white  "
+                    className="bg-red-900 border-red-700 placeholder-white border text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-red-700 dark:border-red-600 dark:placeholder-red-400   "
                   />
                   <Button
                     type="submit"

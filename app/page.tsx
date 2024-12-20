@@ -18,22 +18,23 @@ import {
 import { Button } from "@/components/ui/button"
 
 import "aos/dist/aos.css"
-import { Dialog } from "@/components/ui/dialog"
-import DialogDemo from "@/components/ui/dialogapp"
 import { PricingTable } from "@/components/ui/price-table"
 
 // You can also use <link> for styles
 // ..
 const list = [
-  { item: 1, url: "https://simple-img-viewer.vercel.app/" },
+  { item: 1, url: "https://simple-img-viewer.vercel.app/", name: 'Image Viewer App' },
   {
     item: 2,
-    url: "https://paddle-billing-subscription-starter-delta-nine.vercel.app/",
+    url: "https://designwave.store/", name: 'Design wave Site'
   },
-  { item: 3, url: "https://rhz-ten.vercel.app/" },
-  { item: 4, url: "https://app-minier.vercel.app/" },
-  { item: 5, url: "https://merva-ai.vercel.app/" },
-  { item: 6, url: "https://pos-sys-ebon.vercel.app/" },
+  { item: 3, url: "https://muathalzoubi.netlify.app/", name: 'Protfolio Site' },
+  { item: 4, url: "https://app-investment.netlify.app/", name: 'Investment App' },
+  { item: 5, url: "https://merva-ai.netlify.app/", name: 'Merva AI App' },
+  { item: 6, url: "https://possys-app.netlify.app/", name: 'Point of sales App' },
+  { item: 7, url: "https://normar.netlify.app/", name: 'Normar Dental Lab' },
+  { item: 8, url: "https://babalous.netlify.app", name: 'BAbalous Site' },
+  { item: 9, url: "https://web-desgin-app.netlify.app/", name: 'Web desgin portfolio site' },
 ]
 export default function WebDesignLanding() {
   const [email, setEmail] = useState("")
@@ -216,7 +217,7 @@ export default function WebDesignLanding() {
                     width={600}
                     height={400}
                   />
-                  <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                  <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
                     <Link href={item.url}>
                       {" "}
                       <Button
@@ -225,8 +226,12 @@ export default function WebDesignLanding() {
                       >
                         View Project
                       </Button>
+
                     </Link>
+                    <h3 className="pt-4 text-red-200">{item.name}</h3>
+
                   </div>
+
                 </div>
               ))}
             </div>

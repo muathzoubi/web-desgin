@@ -34,7 +34,7 @@ const pricingData = [
 
 export function PricingTable() {
   return (
-    <Table>
+    <Table className="overflow-hidden	">
       <TableCaption>Pricing for different types of websites</TableCaption>
       <TableHeader>
         <TableRow>

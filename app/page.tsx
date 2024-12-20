@@ -263,7 +263,7 @@ export default function WebDesignLanding() {
               Website Pricing Guide
             </h1>
             <PricingTable />
-            <div className="mt-8 text-sm text-gray-600">
+            <div className="mt-8 text-sm text-gray-400">
               <p>
                 Note: These prices are estimates and can vary based on specific
                 requirements, complexity, and customization needs.
